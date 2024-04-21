@@ -1,0 +1,16 @@
+<div class="border-bottom row" style="margin-bottom:16px;padding-bottom:4px;">
+  
+       <div class="col-9">
+         <h4 style="color: grey;margin-bottom:2px;">{{j['title']}} </h4>
+
+                <div> Location:<b>{{j['location']}}</b> </div>
+
+         {% if 'salary' in j%}
+               <div> Salary:<b>{{j['salary']}}</b> </div>
+         {%endif%}
+       </div>
+<div class="col-3">  <a href="mailto:shaanvt@gmail.com?subject=for%20the%20job%20j['title']&body=My%20name%3A%0D%0AMy%20work%20experience%20%3A%0D%0AMy%20linkedln%3A%0D%0AMy%20resume"><button type="button" class="btn btn-warning">Apply</button></a>
+
+</div>
+  <!-- it is important to include the all of the above in the div tag -->
+</div>

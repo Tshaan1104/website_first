@@ -1,0 +1,16 @@
+h1{
+    color:red;
+    font-size: 2rem;
+  }
+  #bn{
+    /* width:90%; */
+    height:90vh;
+  }
+  .container{
+    max-width: 70vh;
+    margin:0 auto;
+  }
+ #end{
+  /* display:inline; */
+  text-align:center;
+ }
