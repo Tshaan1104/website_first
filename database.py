@@ -3,9 +3,9 @@ import os
 from sqlalchemy import create_engine,text
 import pymysql #for pymysql we have used the poetry add pymysql and then poetry add pymsql@latest
 
-db_connection_string=os.environ['DB_CONNECTION_STRING']
+my_secret = os.environ['DB_CONNECTION_STRING']
 
-engine = create_engine(db_connection_string)
+engine = create_engine(my_secret)
 
 
 
