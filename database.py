@@ -1,6 +1,7 @@
 
 from sqlalchemy import create_engine,text
 import pymysql
+print(pymysql.__version__)
 engine = create_engine('mysql+pymysql://root:XHTZVHoVvwBlLqjIEWSOCyzwpXaWwUHu@monorail.proxy.rlwy.net:51527/railway')
 
 # with engine.connect() as conn:
