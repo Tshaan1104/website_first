@@ -1,6 +1,6 @@
 
 from sqlalchemy import create_engine,text
-import pymysql
+import pymysql #for pymysql we have used the poetry add pymysql and then poetry add pymsql@latest
 
 engine = create_engine('mysql+pymysql://root:XHTZVHoVvwBlLqjIEWSOCyzwpXaWwUHu@monorail.proxy.rlwy.net:51527/railway')
 
