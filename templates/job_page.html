@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{%include 'bootstrap.html'%}
+  
+  <title>{{jobs.title}}- Careers</title>
+</head>
+<body>
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.0ZpMZ-mQdsWmn3aYm5oH3QHaF5&pid=Api&P=0&h=180" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+        Bootstrap
+      </a>
+    </div>
+  </nav>
+  {%include 'banner.html' %}
+  <div class="container">
+  
+  <h1 class="text-center mt-2 mb-4"">Hello World to this page</h1>
+  <h4>Title</h4>
+  <p class="lead">{{jobs.title}}</p>
+  <h4>Salary</h4>
+  <p class="lead">{{jobs.currency}}{{jobs.salary}}</p>
+  <h4>Location</h4>
+  <p class="lead">{{jobs.location}}</p>
+  <h4>Requirement</h4>
+    <ol>
+      {% for l in jobs.requirement.split(',')%}
+      <li>{{l}}</li>
+      {%endfor%}
+    </ol>
+  <!-- <p class="lead">{{jobs.requirement}}</p> -->
+  <h4>Responsibilities</h4>
+    <ul>
+  {%for line in jobs.responsibilities.split('\n')%}
+      <li class="lead">{{line}}</li>
+  {%endfor%}
+    </ul>
+  <!-- <p class="lead">{{jobs.responsibilities}}</p> -->
+  </div>
+  {%include 'footer.html' %}
+</body>
+</html>
