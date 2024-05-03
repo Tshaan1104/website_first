@@ -33,3 +33,17 @@ def load_job_from_db(id):
       return rows[0]._asdict()
 
 
+def add_data_to_db(job_id,data):
+  with engine.connect() as conn:
+    query = text("insert into website_first.applications(job_id,full_name,email,linkedln,education,work_experience,resumeurl) values(:job_id,:full_name,:email,:linkedln,:education,:work_experience,:resumeurl)")
+    conn.execute(query, {
+      'job_id': job_id,
+      'full_name': data['full_name'],
+      'email': data['Email'],
+      'linkedln': data['LinkedIn'],
+      'education': data['loc'],
+      'work_experience': data['work-exp'],
+      'resumeurl': data['resume']
+  })
+    conn.commit()
+

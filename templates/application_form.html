@@ -1,0 +1,31 @@
+<div>
+
+  <form action="/job/{{jobs.id}}/apply" method='post'>
+      <table border=2 style="border-spacing: 10px; border-collapse: separate;" >
+          <tr>
+              <td><label for="">Full Name</label></td> <td><input type="text" name="full_name" placeholder="Peter Parker"></td>
+          </tr>
+          <tr>
+              <td><label for="">Email</label></td> <td><input type="text" name="Email" placeholder="Peter@gmail.com"></td>
+          </tr>
+          <tr><td><label for="">LinkedIn</label></td><td><input type="text" name="LinkedIn" placeholder="Peter@linkedlIn"></td>
+          </tr>
+        
+        <tr>
+            <td><label for="location">Location</label></td>
+            <td><textarea name="loc" id="" cols="30" rows="5"></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="location">Work Experience</label></td>
+            <td><textarea name="work-exp" id="" cols="30" rows="5" placeholder=""></textarea></td>
+        </tr>
+        <tr>
+            <td><label for="location">Resume Link</label></td>
+            <td><input type="text" name="resume" placeholder="resume@link"></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;"><input type="submit" value="submit"></td>
+        </tr>
+      </table>
+  </form>
+</div>

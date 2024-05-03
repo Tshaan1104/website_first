@@ -1,8 +1,9 @@
 # print('hello world')
 
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify,request
+from flask.wrappers import Request
 from sqlalchemy import text
-from database import load_jobs_from_db, load_job_from_db
+from database import load_jobs_from_db, load_job_from_db,add_data_to_db
 
 app = Flask(__name__)
 
@@ -33,6 +34,12 @@ def show_job(id):
     return "Not Found"
   return render_template('job_page.html', jobs=job)
 
+@app.route("/job/<id>/apply", methods=['POST'])
+def apply_job(id):
+  data=request.form
+  job=load_job_from_db(id)
+  add_data_to_db(id,data)
+  return render_template('application_submitted.html',application=data,jobs=job)
 
 print(__name__)
 if __name__ == '__main__':
